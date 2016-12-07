@@ -4,7 +4,6 @@ const app = express();
 const path = require("path");
 const router = require("./router");
 
-
 app.use('/', router);
 
 app.listen(5000);
