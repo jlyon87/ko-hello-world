@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/bootstrap.css">
+	<title>KO Intro Tut</title>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Knockout.js Intro Tutorial
+	</h1>
+
+	<div>
+		<div><a href="/">Home</a></div>
+		<div><a href="/intro">Intro Tutorial</a></div>
+		<div><a href="/collections">Collections Tutorial</a></div>
+	</div>
+
+	<div>
+		<p>First Name:
+			<input type="text" data-bind="value: firstName"></input></p>
+		<p>Last Name:
+			<input type="text" data-bind="value: lastName"></input></p>
+
+		<p>Full Name
+			<strong data-bind="text: fullName"></strong></p>
+
+		<p>
+			<button data-bind="click: capitalizeLastName">Capitalize</button>
+		</p>
+	</div>
+</div>
+</body>
+<footer>
+	<script src="/knockout.js"></script>
+	<script src="/intro-ko-model.js"></script>
+</footer>
+</html>

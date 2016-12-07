@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/bootstrap.css">
+	<title>KO Collections Tut</title>
+</head>
+<body>
+<div class="container">
+	<h1>
+		Knockout.js Collections Tutorial
+	</h1>
+
+	<div>
+		<div><a href="/">Home</a></div>
+		<div><a href="/intro">Intro Tutorial</a></div>
+		<div><a href="/collections">Collections Tutorial</a></div>
+	</div>
+
+	<div>
+		<h2>Your Seat Reservations
+			(<span data-bind="text: seats().length"></span>)</h2>
+
+		<button data-bind="click: addSeat, enable: seats().length < 5">Add Seat</button>
+		<table data-bind="visible: seats().length > 0">
+			<thead>
+				<tr>
+					<th>Passenger Name</th>
+					<th>Meal</th>
+					<th>Surchage</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: seats">
+				<tr>
+					<td >
+						<input data-bind="value: name" />
+					</td>
+					<td >
+						<select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select>
+					</td>
+					<td data-bind="text: formattedPrice"></td>
+					<td>
+						<a href="#" data-bind="click: $root.removeSeat">Remove</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3 data-bind="visible: totalSurcharge() > 0">
+			Total Surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+		</h3>
+	</div>
+</div>
+</body>
+<footer>
+	<script src="/knockout.js"></script>
+	<script src="/collections-ko-model.js"></script>
+</footer>
+</html>
