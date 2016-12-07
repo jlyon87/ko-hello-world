@@ -1,0 +1,18 @@
+{
+  "name": "ko-hello-world",
+  "version": "1.0.0",
+  "description": "Hello World Express & KO SPA",
+  "repository": "https://github.com/jlyon87/ko-hello-world.git",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/server.js"
+  },
+  "author": "jlyon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "knockout": "^3.4.1",
+    "path": "^0.12.7"
+  }
+}
