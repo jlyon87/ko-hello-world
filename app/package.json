@@ -1,7 +1,8 @@
 {
   "name": "ko-hello-world",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hello World Express & KO SPA",
+  "repository": "https://github.com/jlyon87/ko-hello-world.git",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
