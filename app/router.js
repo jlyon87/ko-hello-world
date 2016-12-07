@@ -15,15 +15,15 @@ router.get('/', function(req, res) {
 });
 
 router.get('/intro', function(req, res) {
-	router.use( express.static('/node_modules/knockout/build/output/knockout-latest.js') );
-	router.use( express.static('/js/intro-ko-model.js') );
+/*	router.use( express.static('/node_modules/knockout/build/output/knockout-latest.js') );
+	router.use( express.static('/js/intro-ko-model.js') );*/
 
 	res.sendFile( path.join(__dirname, 'public', 'intro-ko-tut.html') );
 });
 
 router.get('/collections', function(req, res) {
-	router.use( express.static('/node_modules/knockout/build/output/knockout-latest.js') );
-	router.use( express.static('/js/intro-ko-model.js') );
+/*	router.use( express.static('/node_modules/knockout/build/output/knockout-latest.js') );
+	router.use( express.static('/js/intro-ko-model.js') );*/
 
 	res.sendFile( path.join(__dirname, 'public', 'collections-ko-tut.html') );
 });
@@ -43,6 +43,10 @@ router.get('/intro-ko-model.js', function(req, res) {
 
 router.get('/collections-ko-model.js', function(req, res) {
 	res.sendFile( path.join(__dirname, 'js', 'collections-ko-model.js'));
+});
+
+router.get('/favicon.ico', function(req, res) {
+	res.sendFile( path.join(__dirname, 'assets', 'favicon5.ico') );
 });
 
 // Error Router - pick up anything that doesn't match the above.
