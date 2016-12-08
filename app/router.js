@@ -45,9 +45,9 @@ router.get('/collections-ko-model.js', function(req, res) {
 	res.sendFile( path.join(__dirname, 'js', 'collections-ko-model.js'));
 });
 
-router.get('/favicon.ico', function(req, res) {
+/*router.get('/favicon.ico', function(req, res) {
 	res.sendFile( path.join(__dirname, 'assets', 'favicon5.ico') );
-});
+});*/
 
 // Error Router - pick up anything that doesn't match the above.
 router.get('/*', function(req, res) {
