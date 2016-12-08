@@ -33,7 +33,7 @@
 		<h2>Your Seat Reservations
 			(<span data-bind="text: seats().length"></span>)</h2>
 
-		<button class="btn btn-primary"> data-bind="click: addSeat, enable: seats().length < 5">Add Seat</button>
+		<button class="btn btn-primary" data-bind="click: addSeat, enable: seats().length < 5">Add Seat</button>
 		<table class="table table-hover" data-bind="visible: seats().length > 0">
 			<thead>
 				<tr>
