@@ -19,8 +19,8 @@ router.get('/knockout.js', function(req, res) {
 	res.sendFile( path.join(__dirname, '../node_modules', 'knockout/build/output/knockout-latest.js') );
 });
 
-/*router.get('/favicon.ico', function(req, res) {
+router.get('/favicon.ico', function(req, res) {
 	res.sendFile( path.join(__dirname, 'assets', 'favicon5.ico') );
-});*/
+});
 
 module.exports = router;
