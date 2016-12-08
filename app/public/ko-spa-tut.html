@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="/bootstrap.js"></script>
+	<title>KO Intro Tut</title>
+</head>
+<body>
+<div class="container">
+	<div class="page-header">
+		<h1>Knockout.js Tutorial
+			<small>Single Page Application (SPA)</small></h1>
+
+		<div class="btn-group" role="group">
+			<a href="/" class="btn btn-primary">Home</a>
+
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Tutorials
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="/ko/intro" >Intro</a></li>
+					<li><a href="/ko/collections" >Collections</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="btn-group" role="group" data-bind="foreach: folders">
+		<button type=button class="btn btn-primary" data-bind="text: $data,
+			css: { clicked: $data == $root.chosenFolderId() },
+			click: $root.goToFolder">
+	</div>
+
+	<table class="table table-hover" data-bind="with: chosenFolderData">
+		<thead>
+			<tr>
+				<th>From</th>
+				<th>To</th>
+				<th>Subject</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: mails">
+			<tr>
+				<td data-bind="text: from"></td>
+				<td data-bind="text: to"></td>
+				<td data-bind="text: subject"></td>
+				<td data-bind="text: date"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+<footer>
+	<script src="/knockout.js"></script>
+	<script src="/models/ko-spa-model.js"></script>
+</footer>
+</html>

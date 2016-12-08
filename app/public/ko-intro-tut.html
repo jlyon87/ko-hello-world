@@ -4,16 +4,13 @@
 	<link rel="stylesheet" href="/bootstrap.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="/bootstrap.js"></script>
-	<title>Home</title>
+	<title>KO Intro Tut</title>
 </head>
-
 <body>
 <div class="container">
-
-	<div class="jumbotron">
-		<h1>Knockout.js Tutorial</h1>
-		<p><h1><small>안녕하세요 송성순님~~</small></h1></p>
-		<p>A Hello World app sampling <a href="http://expressjs.com/en/starter/installing.html">Express</a> and <a href="http://learn.knockoutjs.com/#/?tutorial=intro">Knockout.js</a></p>
+	<div class="page-header">
+		<h1>Knockout.js Tutorial
+			<small>Introduction</small></h1>
 
 		<div class="btn-group" role="group">
 			<a href="/" class="btn btn-primary">Home</a>
@@ -32,8 +29,23 @@
 		</div>
 	</div>
 
+	<div>
+		<p>First Name:
+			<input type="text" data-bind="value: firstName"></input></p>
+		<p>Last Name:
+			<input type="text" data-bind="value: lastName"></input></p>
+
+		<p>Full Name
+			<strong data-bind="text: fullName"></strong></p>
+
+		<p>
+			<button data-bind="click: capitalizeLastName">Capitalize</button>
+		</p>
+	</div>
 </div>
 </body>
-
-<footer></footer>
+<footer>
+	<script src="/knockout.js"></script>
+	<script src="/models/ko-intro-model.js"></script>
+</footer>
 </html>

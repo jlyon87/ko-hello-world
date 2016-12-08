@@ -2,18 +2,31 @@
 <html>
 <head>
 	<link rel="stylesheet" href="/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="/bootstrap.js"></script>
 	<title>KO Collections Tut</title>
 </head>
 <body>
 <div class="container">
-	<h1>
-		Knockout.js Collections Tutorial
-	</h1>
+	<div class="page-header">
+		<h1>Knockout.js Tutorial
+			<small>Collections</small></h1>
 
-	<div>
-		<div><a href="/">Home</a></div>
-		<div><a href="/intro">Intro Tutorial</a></div>
-		<div><a href="/collections">Collections Tutorial</a></div>
+		<div class="btn-group" role="group">
+			<a href="/" class="btn btn-primary">Home</a>
+
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Tutorials
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="/ko/intro" >Intro</a></li>
+					<li><a href="/ko/collections" >Collections</a></li>
+				</ul>
+			</div>
+
+		</div>
 	</div>
 
 	<div>
@@ -53,6 +66,6 @@
 </body>
 <footer>
 	<script src="/knockout.js"></script>
-	<script src="/collections-ko-model.js"></script>
+	<script src="/models/ko-collections-model.js"></script>
 </footer>
 </html>
